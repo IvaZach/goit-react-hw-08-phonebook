@@ -2,11 +2,11 @@ import React from 'react';
 
 import ContactListItem from 'components/ContactListItem/ContactListItem';
 import { useSelector } from 'react-redux';
-import { selectVisibleContacts } from '../../redux/selectors';
+import { selectVisibleContacts } from '../../redux/contacts/selectors';
 
 const ContactList = () => {
   const visibleContacts = useSelector(selectVisibleContacts);
-  console.log(visibleContacts)
+  console.log(visibleContacts);
   return (
     <>
       <table className="table">
