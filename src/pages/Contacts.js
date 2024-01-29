@@ -2,12 +2,11 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Helmet } from 'react-helmet';
 
-
 import { PhoneBook } from 'components/PhoneBook/PhoneBook';
 import { fetchContacts } from '../redux/contacts/operations';
 import { selectError, selectIsLoading } from '../redux/contacts/selectors';
 
-export default function Tasks() {
+export default function Contacts() {
   const dispatch = useDispatch();
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
