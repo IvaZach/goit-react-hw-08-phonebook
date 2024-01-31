@@ -1,11 +1,11 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as yup from 'yup';
 import css from './ContactForm.module.css';
 import { addContact } from '../../redux/contacts/operations';
 import { selectContacts } from '../../redux/contacts/selectors';
+import Button from '@mui/material/Button';
 
 const initialValues = {
   name: '',
@@ -13,14 +13,7 @@ const initialValues = {
 };
 
 let schema = yup.object().shape({
-  name: yup
-    .string()
-    .trim()
-    .matches(
-      /^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$/,
-      'Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d`Artagnan'
-    )
-    .required(),
+  name: yup.string().trim().required(),
   number: yup
     .string()
     .trim()
@@ -83,13 +76,13 @@ export const ContactForm = () => {
             name="number"
             id="inputTel"
             className="form-control"
+            placeholder="number"
           />
           <ErrorMessage name="number" component="div" />
         </div>
-
-        <button type="submit" className="btn btn-primary">
+        <Button variant="contained" type="submit">
           Add contact
-        </button>
+        </Button>
       </Form>
     </Formik>
   );

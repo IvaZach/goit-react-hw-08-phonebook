@@ -1,20 +1,22 @@
 .section {
-  display: flex;
-  justify-content: space-around;
+  /* display: flex; */
+  /* justify-content: space-around; */
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
 @media screen and (min-width: 480px) {
   .section {
-    width: 480px;
+    min-width: 'calc(100vh - 50px)';
   }
 }
 @media screen and (min-width: 768px) {
   .section {
-    width: 768px;
+    min-width: 'calc(100vh - 50px)';
   }
 }
 @media screen and (min-width: 1200px) {
   .section {
-    width: 1000px;
+    width: 930px;
   }
 }

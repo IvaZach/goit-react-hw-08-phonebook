@@ -20,8 +20,10 @@ export default function Contacts() {
       <Helmet>
         <title>Your contacts</title>
       </Helmet>
-      
-      <div>{isLoading && !error && 'Request in progress... Loading contacts...'}</div>
+
+      <div>
+        {isLoading && !error && 'Request in progress... Loading contacts...'}
+      </div>
       <PhoneBook />
       {error && <h3>{error}</h3>}
     </>
