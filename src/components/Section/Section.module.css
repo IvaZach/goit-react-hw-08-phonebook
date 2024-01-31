@@ -7,12 +7,12 @@
 
 @media screen and (min-width: 480px) {
   .section {
-    min-width: 'calc(100vh - 50px)';
+    min-width: "calc(100vh - 50px)";
   }
 }
 @media screen and (min-width: 768px) {
   .section {
-    min-width: 'calc(100vh - 50px)';
+    min-width: "calc(100vh - 50px)";
   }
 }
 @media screen and (min-width: 1200px) {

@@ -19,7 +19,9 @@ export default function Home() {
         YOUR PHONE BOOK
         <img
           src="https://img.youscreen.ru/wall/14977347587960/14977347587960_1920x1200.jpg"
-          width="980" alt="phone"/>
+          width="980"
+          alt="phone"
+        />
       </h1>
     </div>
   );
